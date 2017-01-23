@@ -10,7 +10,7 @@ var TodoList = React.createClass({
       return todos.map((todo) => {
         // keys help React identify which items have changed, are added, or are removed
         // keys should be given to the elements inside the array to give the elements a stable identity
-        return <Todo key={todo.id} {...todo}/> // spread operator lets us spread out all properties of an object, in this case into indv. props
+        return <Todo key={todo.id} {...todo} onToggle={this.props.onToggle}/> // spread operator lets us spread out all properties of an object, in this case into indv. props
       });
     }
     return (
