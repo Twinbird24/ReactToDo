@@ -19,5 +19,19 @@ module.exports = {
 
     // check if we actualy get an array
     return $.isArray(todos) ? todos : [];
+  },
+  filterTodos: function (todos, showCompleted, searchText) {
+    var filteredTodos = todos;
+
+    // filter by showCompleted
+    filteredTodos = filteredTodos.filter((todo) => {
+      return !todo.completed || showCompleted;
+    });
+
+    // filter by searchText
+
+    // sort todos with non-completed first
+
+    return filteredTodos;
   }
 }
