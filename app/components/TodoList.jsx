@@ -5,6 +5,14 @@ var TodoList = React.createClass({
   render: function () {
     var {todos} =  this.props;
     var renderTodos = () => {
+
+      // if there are no todos to show, let's return a message instead
+      if (todos.length === 0) {
+        return (
+          <p className="container__message">Nothing To Do</p>
+        )
+      }
+
       // interate over passed-in array (todos) and return array of jsx
       // map calls a function for each element in array, and then returns the results
       return todos.map((todo) => {

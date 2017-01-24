@@ -7,3 +7,6 @@
 @import "base/variables";
 
 // component partials start with an underscore but we don't need to specify it inside of the import
+@import "components/container";
+@import "components/page-title";
+@import "components/todo";
